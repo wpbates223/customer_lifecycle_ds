@@ -100,11 +100,14 @@ uvicorn src.api.app:app --reload
 
 Open: http://127.0.0.1:8000/docs
 
+![API Test](visuals/Test%20Predict%20API.png)
+
 ### 4. Run Dashboard
 
 ```bash
 streamlit run dashboard/app.py
 ```
+![Streamlit Dashboard](visuals/Streamlit%20Dashboard.png)
 
 ## Example API Output
 
