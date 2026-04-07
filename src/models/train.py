@@ -19,6 +19,12 @@ X = df.drop(columns=["Exited", "RowNumber", "CustomerId", "Surname"])
 # One-hot encoding for categorical variables
 X = pd.get_dummies(X, drop_first=True)
 
+feature_columns = X.columns.tolist()
+
+import json
+with open("models/feature_columns.json", "w") as f:
+    json.dump(feature_columns, f)
+
 # Split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
